@@ -94,8 +94,8 @@ padding:100px 30px;
 
 .star{
 position:absolute;
-width:3px;
-height:3px;
+width:2px;
+height:2px;
 background:white;
 border-radius:50%;
 animation:twinkle 2s infinite alternate;
@@ -278,26 +278,26 @@ document.getElementById("comfortMessage").classList.remove("hidden")
 
 const notes=[
 
-"I see the effort you put in every single day.",
-"I wish you could see yourself the way I see you.",
-"You don't have to be perfect to be loved.",
-"I am proud of you even on your hardest days.",
-"Even when you are tired, you keep going.",
-"You deserve peace, not just success.",
-"I wish I could hug you every time you feel overwhelmed.",
-"I believe in you more than you realize.",
-"Your effort does not go unnoticed.",
-"You are stronger than you think.",
-"I admire how hard you try.",
-"You inspire me with your determination.",
-"Even when things feel uncertain, you keep moving.",
-"You deserve gentle days after all this effort.",
-"I believe your future is bright.",
-"I am proud of the person you are.",
-"You mean more to me than you realize.",
-"You are worth believing in.",
-"I will always support you.",
-"You are never alone."
+"Even when you feel like you’re not enough, you are more than enough to me.",
+"If I could take away your stress and carry it for you, I would do it without thinking twice.",
+"I don’t just love your happy days, I love you even more on the days you feel broken.",
+"When the world becomes too loud for you, I hope my love feels like quiet.",
+"You may feel tired of everything, but I will never get tired of being on your side.",
+"I wish you could see how special you are through my eyes for just one moment.",
+"Even when you doubt yourself, my faith in you never wavers.",
+"Your struggles don’t make you weaker to me, they make me admire you more.",
+"If your mind ever feels heavy, remember there is someone whose heart rests in you.",
+"You are the person I silently pray finds peace after all this pressure.",
+"I see the strength in you that you sometimes forget you have.",
+"Even on the days you feel lost, you are still the person I choose every time.",
+"I wish I could sit beside you and remind you how incredible you are.",
+"No result, no exam, no job will ever change how much you mean to me.",
+"If the world ever makes you feel small, remember you are everything to someone.",
+"Loving you means standing beside you even in the storms you hide from everyone else.",
+"I don't admire you because everything is easy for you,I admire you because you keep going when it isn't.",
+"Even when you are quiet and distant, my heart still stays close to yours.",
+"I hope someday you realize that you are someone worth fighting for.",
+"And no matter how difficult this phase becomes, I will still be here, loving you through it."
 
 ]
 
@@ -331,7 +331,7 @@ document.body.appendChild(s)
 
 }
 
-for(let i=0;i<70;i++){
+for(let i=0;i<150;i++){
 
 let star=document.createElement("div")
 star.className="star"
@@ -339,7 +339,9 @@ star.className="star"
 star.style.top=Math.random()*100+"%"
 star.style.left=Math.random()*100+"%"
 
-document.getElementById("finalPage").appendChild(star)
+document.body.appendChild(star)
+
+}
 
 }
 
