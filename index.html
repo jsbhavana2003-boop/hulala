@@ -9,7 +9,7 @@
 body{
 margin:0;
 font-family:Segoe UI;
-background:linear-gradient(180deg,#f4fbff,#e8f7ff);
+background:linear-gradient(180deg,#f7fcff,#eaf7ff);
 color:#2c3e50;
 text-align:center;
 overflow-x:hidden;
@@ -34,48 +34,32 @@ to{opacity:1}
 
 section{
 padding:80px 20px;
-min-height:80vh;
 }
 
 h1{
-font-size:42px;
+font-size:40px;
 }
 
 .instructions{
-color:#567;
+color:#5b6f82;
 font-size:18px;
 margin-top:10px;
 }
 
-button{
-padding:12px 25px;
-border:none;
-border-radius:30px;
-background:#7db7ff;
-color:white;
-font-size:16px;
-cursor:pointer;
-margin-top:20px;
-}
-
-.hidden{
-display:none;
-}
-
-/* beating hearts */
+/* hearts */
 
 .heart{
 position:absolute;
-font-size:28px;
+font-size:26px;
 cursor:pointer;
-animation:beat 1.2s infinite;
+animation:beat 1.4s infinite;
 }
 
 @keyframes beat{
 0%{transform:scale(1)}
-25%{transform:scale(1.25)}
-40%{transform:scale(1)}
-60%{transform:scale(1.25)}
+25%{transform:scale(1.15)}
+50%{transform:scale(1)}
+75%{transform:scale(1.15)}
 100%{transform:scale(1)}
 }
 
@@ -94,10 +78,21 @@ box-shadow:0 10px 30px rgba(0,0,0,0.15);
 display:none;
 }
 
-.close{
+button{
+padding:10px 20px;
+border:none;
+border-radius:25px;
+background:#7fb9ff;
+color:white;
+cursor:pointer;
 margin-top:15px;
-background:#7db7ff;
 }
+
+.hidden{
+display:none;
+}
+
+/* final page */
 
 #finalPage{
 background:linear-gradient(180deg,#0d1b2a,#1b263b);
@@ -128,36 +123,62 @@ animation:twinkle 2s infinite alternate;
 <h1>Something You Must Hear Right Now</h1>
 
 <p class="instructions">
-There are hearts scattered across this page.  
-Open them slowly.  
-Each one carries something I truly wanted you to hear. ❤️
+There are hearts across this page.  
+Open them one by one.  
+Each heart carries something I wanted you to hear. ❤️
 </p>
 
-<button onclick="showComfort()">If today feels too heavy, press this</button>
+<button onclick="showComfort()">If today feels overwhelming, press this</button>
 
 <p id="comfortMessage" class="hidden">
 
-I know you're tired.  
-I know your mind hasn't rested in days.
+I know you are tired.
 
-But please remember something.
+I know your mind has been carrying a lot lately.
 
-You are not alone in this moment.
-
-If I could sit next to you right now,  
+If I could sit next to you right now  
 I would just quietly hold your hand.
+
+You don't have to go through this alone.
 
 </p>
 
 </section>
 
 
-<div id="heartsContainer"></div>
+<!-- HEARTS -->
+
+<div class="heart" style="top:35%;left:15%">❤️</div>
+<div class="heart" style="top:50%;left:25%">💗</div>
+<div class="heart" style="top:65%;left:18%">💖</div>
+<div class="heart" style="top:80%;left:30%">💕</div>
+
+<div class="heart" style="top:40%;left:80%">💓</div>
+<div class="heart" style="top:60%;left:75%">💞</div>
+<div class="heart" style="top:75%;left:85%">💘</div>
+<div class="heart" style="top:90%;left:70%">💝</div>
+
+<div class="heart" style="top:110%;left:20%">❤️</div>
+<div class="heart" style="top:120%;left:40%">💗</div>
+<div class="heart" style="top:130%;left:60%">💖</div>
+<div class="heart" style="top:140%;left:80%">💕
+
+</div>
+
+<div class="heart" style="top:160%;left:15%">💓</div>
+<div class="heart" style="top:170%;left:35%">💞</div>
+<div class="heart" style="top:180%;left:55%">💘</div>
+<div class="heart" style="top:190%;left:75%">💝</div>
+
+<div class="heart" style="top:210%;left:25%">❤️</div>
+<div class="heart" style="top:220%;left:45%">💗</div>
+<div class="heart" style="top:230%;left:65%">💖</div>
+<div class="heart" style="top:240%;left:85%">💕</div>
 
 
 <div id="popup" class="popup">
 <p id="noteText"></p>
-<button class="close" onclick="closePopup()">Close</button>
+<button onclick="closePopup()">Close</button>
 </div>
 
 
@@ -172,19 +193,11 @@ Exams may exhaust you.
 
 <br><br>
 
-There will be days when you feel like you are not enough.
+There will be moments when you doubt yourself.
 
 <br><br>
 
-But I see something you don't always see.
-
-<br><br>
-
-I see someone who keeps trying even when he is tired.
-
-<br><br>
-
-I see someone who keeps standing even when things feel uncertain.
+But I see someone who keeps trying even when he is tired.
 
 <br><br>
 
@@ -192,11 +205,12 @@ And that kind of strength is rare.
 
 <br><br>
 
-Whether the world rewards you immediately or not...
+Whether things go exactly as planned  
+or take a completely different path…
 
 <br><br>
 
-I will always be proud of you.
+I will still be proud of you.
 
 </p>
 
@@ -211,110 +225,73 @@ I will always be proud of you.
 </section>
 
 
-
 <script>
-
-/* comfort button */
 
 function showComfort(){
 document.getElementById("comfortMessage").classList.remove("hidden")
 }
 
-
-/* emotional notes */
-
 const notes=[
 
-"I know you feel pressure right now. But your effort already means so much.",
-
-"You may feel tired today, but I see how brave you are for continuing.",
+"I see the effort you put in every single day.",
 
 "I wish you could see yourself the way I see you.",
 
-"You don't need to succeed to be worthy of love.",
+"You don't have to be perfect to be loved.",
 
-"I am proud of you even on the days when you doubt yourself.",
+"I am proud of you even on your hardest days.",
 
-"Even when you're quiet and stressed, you are still my favorite person.",
-
-"If you ever feel like giving up, remember someone is quietly rooting for you.",
-
-"I know how much you carry inside your mind.",
-
-"I see the sleepless nights you never talk about.",
+"Even when you are tired, you keep going.",
 
 "You deserve peace, not just success.",
 
-"I wish I could take away your stress for a while.",
+"I wish I could hug you every time you feel overwhelmed.",
 
-"Even if the world doesn't say it today, you are doing incredibly well.",
+"I believe in you more than you realize.",
 
-"Your effort is visible to the people who truly care about you.",
+"Your effort does not go unnoticed.",
 
-"You may feel alone sometimes, but you are never alone to me.",
+"You are stronger than you think.",
 
-"I am proud of you even before the results come.",
+"I admire how hard you try.",
 
-"You don't have to be perfect to be loved.",
+"You inspire me with your determination.",
 
-"You are stronger than the fear you're feeling.",
+"Even when things feel uncertain, you keep moving.",
 
-"I wish I could hug you every time your mind feels heavy.",
+"You deserve gentle days after all this effort.",
 
-"The way you keep trying inspires me.",
+"I believe your future is bright.",
 
-"You deserve gentle days after all this hard work.",
+"I am proud of the person you are.",
 
-"If today was hard, tomorrow will still welcome you.",
+"You mean more to me than you realize.",
 
-"Even your quiet strength is beautiful.",
+"You are worth believing in.",
 
-"You are someone worth believing in.",
+"I will always support you.",
 
-"I believe in your future even on your hardest days.",
-
-"I hope one day you realize how incredible you really are."
+"You are never alone."
 
 ]
 
+document.querySelectorAll(".heart").forEach((heart)=>{
 
-/* create hearts randomly */
+heart.addEventListener("click",()=>{
 
-function createHearts(){
+let i=Math.floor(Math.random()*notes.length)
 
-const container=document.getElementById("heartsContainer")
-
-for(let i=0;i<35;i++){
-
-let heart=document.createElement("div")
-heart.className="heart"
-heart.innerHTML="❤️"
-
-heart.style.top=Math.random()*90+"%"
-heart.style.left=Math.random()*95+"%"
-
-heart.onclick=function(){
-showNote(Math.floor(Math.random()*notes.length))
-}
-
-container.appendChild(heart)
-
-}
-
-}
-
-createHearts()
-
-
-function showNote(i){
-document.getElementById("popup").style.display="block"
 document.getElementById("noteText").innerText=notes[i]
-}
+
+document.getElementById("popup").style.display="block"
+
+})
+
+})
 
 function closePopup(){
 document.getElementById("popup").style.display="none"
 }
-
 
 /* sparkles */
 
@@ -330,10 +307,9 @@ document.body.appendChild(s)
 
 }
 
+/* stars */
 
-/* stars final page */
-
-for(let i=0;i<80;i++){
+for(let i=0;i<70;i++){
 
 let star=document.createElement("div")
 star.className="star"
